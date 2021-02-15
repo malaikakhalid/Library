@@ -2,7 +2,7 @@ POST http://localhost:2000/books/add
 Content-Type: application/json
 
 {
-    "book_title": "malaika",
+    "book_title": "osama",
     "book_author" : "hiii",
     "book_desc" : "Start",
     "book_genre" : "Start"
@@ -13,6 +13,8 @@ Content-Type: application/json
 
 GET http://localhost:2000/books
 
+###
+GET http://localhost:2000/books/detail/601bcb4b2082dd0688dbd072
 
 ###
 PUT  http://localhost:2000/books/update/601bb65544921b42d402cefb
@@ -25,3 +27,8 @@ Content-Type: application/json
     "book_genre" : "Start"
     
 }
+
+
+###
+
+DELETE http://localhost:2000/books/delete/601bb65544921b42d402cefb

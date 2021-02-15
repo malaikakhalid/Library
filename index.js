@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const cors = require("cors");
 
 
 const envConfig = require("./config/server_env");
@@ -12,6 +13,8 @@ const booksController = require("./controller/bookcontroller");
 app.get('/', (req,res) => {
     res.send({Project: "MERN CRUD"})
 });
+
+app.use(cors());
 
 
 mongoose

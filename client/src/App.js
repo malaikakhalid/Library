@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import axios from "axios";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  BrowserRouter,
+} from "react-router-dom";
+import Books from "./components/books";
+import Details from "./components/Details";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import CreateBook from "./components/CreateBook";
+import edit from "./components/edit";
+import Header from "./components/Header";
+
+export default class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Route path="/" exact component={Books} />
+          <Route path="/books/:id" component={Details} />
+          <Route path="/add" component={CreateBook} />
+          <Route path="/edit/:id" component={edit} />
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
-
-export default App;
