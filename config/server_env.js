@@ -4,7 +4,7 @@ serverConfig.development = {
   //This is for development purpose
   domain_url: process.env.development || "http://localhost:8000",
   domain_address: process.env.development || "0.0.0.0",
-  domain_port: process.env.development || "2000",
+  domain_port: process.env.development || "1000",
   database: process.env.development || "mongodb://127.0.0.1:27017/LIBRARY",
 };
 
